@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table id="stocks">
+         <tr>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Side</th>
+            <th>quantity</th>
+            <th>Total price</th>
+            <th>Transacted</th>
+        </tr>
+
+        {% for i in trades %}
+        <tr>
+            <td>{{     i["symbol"]    }}</td>
+            <td>{{     i["price"]    }} €</td>
+            {% if i["isBuyer"] == True %}
+            <td>Buy</td>
+            {% else %}
+            <td>Sell</td>
+            {% endif %}
+            <td>{{     i["qty"]   }} ETH</td>
+            <td>{{     i["quoteQty"]   }} €</td>
+            <td>{{     i["time"]   }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}

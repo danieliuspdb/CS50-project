@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy/Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/buy_sell" method="post">
+      <div id="idk">
+        <select name="symbol" id="symbol">
+            <option value="symbol1" name="symbol1" disabled selected>Symbol</option>
+            {% for i in exchange_info['symbols'] %}
+            {% if i['symbol'].endswith('EUR') %}
+                    <option value="{{i['symbol']}}" name="symbol">{{i['symbol']}}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="quantity" placeholder="quantity" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit" name="submit_button" value="buy">Buy</button>
+
+        <div id="idkl">
+            <select name="symbol2" id="symbol">
+                <option value="symbol1" name="symbol1" disabled selected>Symbol</option>
+                {% for i in exchange_info['symbols'] %}
+                {% if i['symbol'].endswith('EUR') %}
+                        <option value="{{i['symbol']}}" name="symbol2">{{i['symbol']}}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="quantity2" placeholder="quantity" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit" name="submit_button" value="sell">Sell</button>
+
+            </div>
+            <style type="text/css" scoped>
+              #idkl { padding-top:50px; }
+              input {
+                  width: 100px;
+                }
+            </style>
+        </div>
+
+    </form>
+{% endblock %}
