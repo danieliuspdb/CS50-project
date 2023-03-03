@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+footer{
+    height: auto;
+}
+
+.header{
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.inner_header{
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo_container{
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo_container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.logo_container h1 span{
+    font-weight:800;
+}
+
+.navigation{
+    float: right;
+    height: 100%;
+}
+
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+.navigation a li:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: grey;
+}
+
+
+
+#main{
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+.about{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 5fr 6fr;
+    grid-auto-rows: 2fr 5fr;
+    background-color: #080808;
+}
+
+.about_us1{
+    font-family: 'Bahnschrift Condensed';
+    font-size: 65px;
+    padding-top: 100px;
+    padding-left: 150px;
+    color: white;
+    background-color: #080808;
+}
+
+hr{
+    width: 200px;
+}
+
+.about_us2{
+    background-color: black;
+    padding-left: 20px;
+}
+
+img{
+    height: 500px;
+    width: auto;
+}
+
+.about_us3{
+    font-family: 'Bahnschrift Condensed';
+    font-size: 40px;
+    padding-top: 100px;
+    color: white;
+    background-color: black;
+    padding-left: 50px;
+}
+
+.about_us4{
+    font-family: 'Bahnschrift Condensed';
+    font-size: 30px;
+    color: white;
+    background-color: #080808;
+    padding-top: 50px;
+    padding-left: 30px;
+}
+
+.about_us4 p{
+}
+
+input[type=submit] {
+  background-color: yellow;
+  color: yellow;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + #main {
+  padding-top: 102px;
+}
+
+.footer{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background-color: #2E3031;
+}
+.inner_footer{
+    display: block;
+    margin: 0 auto;
+    width: 1100px;
+    height: 100%;
+}
+
+.inner_footer .logo_container{
+    width: 35%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+
+.inner_footer .logo_container img{
+    width: 65px;
+    height: auto;
+}
+.inner_footer .footer_third{
+    width: calc(21.666666667% - 20px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+}
+
+.inner_footer .footer_third:last-child{
+    margin-right: 0;
+}
+
+.inner_footer .footer_third h1{
+    font-family: 'Bahnschrift Condensed';
+    height: 100%;
+    font-size: 22px;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inner_footer .footer_third a{
+    font-family: 'Bahnschrift Condensed';
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+    display: block;
+    width: 200;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.inner_footer .footer_third li{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 20px;
+}
+
+.inner_footer .footer_third span{
+    color: white;
+    font-family: 'Bahnschrift Condensed';
+    font-size: 16px;
+    font-weight: 200;
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+}
+
+@media(max-width: 600px){
+    .footer .inner_footer{
+        width: 90%;
+    }
+
+    inner_footer .logo_container,
+    inner_footer .footer_third{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

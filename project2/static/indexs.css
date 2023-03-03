@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 100%;
+}
+.footer{
+    height: auto;
+}
+
+.header{
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.inner_header{
+    width: 90%;
+    /*height: 100%;*/
+    display: block;
+    margin: 0 auto;
+}
+
+.logo_container{
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo_container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.logo_container h1 span{
+    font-weight:800;
+}
+
+.navigation{
+    float: right;
+    height: 100%;
+}
+
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+.navigation a li:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: grey;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('72.jpg');
+}
+
+#box1 {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    overflow: hidden;
+}
+
+#box2{
+    width: 90%;
+    height: auto;
+    font-family: 'Bahnschrift Condensed';
+    color: white;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1.6;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    overflow: hidden;
+}
+
+#my_image{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: -100%;
+    animation: anim3 2s forwards 1s;
+}
+
+#text{
+    position: relative;
+    left: -100%;
+    animation: anim3 2s forwards 1s;
+}
+
+@keyframes anim3{
+    from{
+        left: -100%;
+    }
+    to{
+        left:0%;
+    }
+}
+
+.button {
+  position: absolute;
+  left: 80%;
+  bottom: 0;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 4px solid white;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 0;
+  width: 300px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  animation: anim4 2s forwards 1s;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@keyframes anim4{
+    from{
+        bottom: -1000px;
+    }
+    to{
+        bottom: 25px;
+    }
+}
