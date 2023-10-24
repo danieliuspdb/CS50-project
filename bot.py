@@ -7,9 +7,6 @@ from binance.client import Client
 
 #SOCKET = "wss://stream.binance.com:9443/ws/ethusdt@kline_1m"
 
-#API_KEY = 'jUfPTZ8NnsbfWFPYx2RjhAeVkAZvVkyQB3FDgIGtO7icUgxwXdnBJQK4Vvbjiymk'
-#API_SECRET = 'JpPcHKOExBf34L0n3kE3GeuqMzTI83IeRvGLSxTcSkLr4PfVfxQnwZVNOEmftjpC'
-
 client = Client(config.API_KEY, config.API_SECRET)
 
 print(client.get_asset_balance(asset='EUR'))
