@@ -1,3 +1,3 @@
-# CS50-project
+# Cryptocurrency day-trading bot/store
 
-This is a copy of my work from the original CS50 project that I did during the course
+For my final CS50 project using Python and Binance API I created cryptocurrency day-trading bot/store
